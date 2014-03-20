@@ -1,3 +1,7 @@
+**Note:** When I wrote this category, I did not know about [`setValue:forKeyPath:`](https://developer.apple.com/library/mac/documentation/cocoa/reference/foundation/Protocols/NSKeyValueCoding_Protocol/Reference/Reference.html#//apple_ref/occ/instm/NSObject/setValue:forKeyPath:) and [`valueForKey:`](https://developer.apple.com/library/mac/documentation/cocoa/reference/foundation/Protocols/NSKeyValueCoding_Protocol/Reference/Reference.html#//apple_ref/occ/instm/NSObject/valueForKey:) in [NSKeyValueCoding](https://developer.apple.com/library/mac/documentation/cocoa/reference/foundation/Protocols/NSKeyValueCoding_Protocol/Reference/Reference.html). Those should probably be used in most cases, but this category might still be useful in some conditions.
+
+----
+
 Adds two methods to get and set property values using dot-separated keys. See the [header file comments for details](NSObject%2BKeyDotValue.h).
 
 Both methods allow the key to be a dot-separated path to a property. For example, let's say you have a card object, which has a contact property, which has firstName (NSString) and profileImage (UIImage) properties. All of these keys would be valid in that case:
